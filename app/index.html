@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastBite</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="grid-container">
+        <div class="grid-element">
+          <a href="#header"><div class="logo">
+              <picture >
+                <source srcset="images/логотип.avif" type="image/avif" />
+                <source srcset="images/логотип.webp" type="image/webp" />
+                <img src="images/логотип.png" alt="логотип"/>
+              </picture>
+            <div class="logo-text">FastBite</div>
+          </div></a>
+        </div>
+        <div class="grid-element">
+          <nav>
+            <input type="checkbox" id="burger-toggle" hidden />
+            <label for="burger-toggle" id="burger-btn" aria-label="Открыть меню">&#9776;</label>
+            <ul id="menu-list">
+              <li><a href="#about">О компании</a></li>
+              <li><a href="#menu">Меню</a></li>
+              <li><a href="#promotions">Акции</a></li>
+              <li><a href="#delivery">Доставка и оплата</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#subscribe">Подписаться</a></li>
+              <li><a href="#footer">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid-element">
+          <div class="tel">
+            <img src="images/телефон.png" alt="" class="icon-tel" />
+            <div class="tel-text">
+              <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="home" class="main-banner" role="banner" aria-label="Главный баннер">
+        <picture class="active" data-index="0">
+          <source srcset="images/banner1.avif" type="image/avif" />
+          <source srcset="images/banner1.webp" type="image/webp" />
+          <img src="images/banner1.png" alt="Banner 1" style="width: 100%; height: 100%; object-fit: cover" />
+        </picture>
+        <picture data-index="1">
+          <source srcset="images/banner2.avif" type="image/avif" />
+          <source srcset="images/banner2.webp" type="image/webp" />
+          <img src="images/banner2.png" alt="Banner 2" style="width: 100%; height: 100%; object-fit: cover" />
+        </picture>
+        <picture data-index="2">
+          <source srcset="images/banner3.avif" type="image/avif" />
+          <source srcset="images/banner3.webp" type="image/webp" />
+          <img src="images/banner3.png" alt="Banner 3" style="width: 100%; height: 100%; object-fit: cover" />
+        </picture>
+
+        <div class="banner-text" aria-live="polite" aria-atomic="true">
+          <div class="active">
+            <h1>FastBite - Вкусно. Быстро. Всегда с тобой.</h1>
+          </div>
+          <div><h1>Лучшие бургеры и пицца с доставкой на дом.</h1></div>
+          <div><h1>Свежие закуски и напитки - всегда под рукой.</h1></div>
+        </div>
+        <div class="banner-subtext" aria-live="polite" aria-atomic="true">
+          <div class="active">Доставка любимых бургеров, пиццы и закусок прямо к вашему порогу!</div>
+          <div>Горячая еда за считанные минуты - вкусно и удобно.</div>
+          <div>Заказывайте онлайн - мы позаботимся о вашем аппетите!</div>
+        </div>
+        <a href="#menu"><button class="btn-order" type="button">Заказать сейчас</button></a>
+      </section>
+    </header>
+
+
+<section id="about" aria-labelledby="about-title">
+  <div class="container">
+    <h2 id="about-title">О компании</h2>
+    <p>
+      FastBite - это современная компания, которая предлагает вкусный и быстрый
+      фаст-фуд с доставкой на дом и в офис. Мы заботимся о качестве и свежести
+      каждого блюда.
+    </p>
+  </div>
+</section>
+
+<section id="menu">
+<!-- catalog filter -->
+<div id="category-filter" role="radiogroup" aria-label="Фильтр каталога товаров">
+  <input type="radio" id="cat-burgers" name="catalog-filter" value="burgers" checked />
+  <label for="cat-burgers">Бургеры</label>
+  <input type="radio" id="cat-pizza" name="catalog-filter" value="pizza" />
+  <label for="cat-pizza">Пицца</label>
+  <input type="radio" id="cat-drinks" name="catalog-filter" value="drinks" />
+  <label for="cat-drinks">Напитки</label>
+  <input type="radio" id="cat-snacks" name="catalog-filter" value="snacks" />
+  <label for="cat-snacks">Закуски</label>
+</div>
+
+<div class="container">
+  <div class="items" id="catalog-items" role="list">
+    <!-- burgers -->
+    <div class="item show" data-category="burgers" data-id="1" data-title="Классический бургер" data-desc="Сочный бургер с говяжьей котлетой, свежими овощами и соусом." data-price="350" data-img="images/Классический бургер.png" role="listitem" tabindex="0" aria-label="Классический бургер, 350 рублей">
+      <img src="images/Классический бургер.png" alt="Классический бургер" />
+      <div class="item-content">
+        <div class="item-title">Классический бургер</div>
+        <div class="item-desc">Сочный бургер с говяжьей котлетой, свежими овощами и соусом.</div>
+        <div class="item-price">350 ₽</div>
+      </div>
+    </div>
+    <div class="item show" data-category="burgers" data-id="2" data-title="Чизбургер" data-desc="Бургер с плавленым сыром, сочной котлетой и свежими овощами." data-price="380" data-img="images/Чизбургер.png" role="listitem" tabindex="0" aria-label="Чизбургер, 380 рублей">
+      <img src="images/Чизбургер.png" alt="Чизбургер" />
+      <div class="item-content">
+        <div class="item-title">Чизбургер</div>
+        <div class="item-desc">Бургер с плавленым сыром, сочной котлетой и свежими овощами.</div>
+        <div class="item-price">380 ₽</div>
+      </div>
+    </div>
+    <div class="item show" data-category="burgers" data-id="4" data-title="Бургер с беконом" data-desc="Бургер с хрустящим беконом, говяжьей котлетой и сыром." data-price="420" data-img="images/Бургер с беконом.png" role="listitem" tabindex="0" aria-label="Бургер с беконом, 420 рублей">
+      <img src="images/Бургер с беконом.png" alt="Бургер с беконом" />
+      <div class="item-content">
+        <div class="item-title">Бургер с беконом</div>
+        <div class="item-desc">Бургер с хрустящим беконом, говяжьей котлетой и сыром.</div>
+        <div class="item-price">420 ₽</div>
+      </div>
+    </div>
+    <!-- pizza -->
+    <div class="item" data-category="pizza" data-id="11" data-title="Маргарита" data-desc="Классическая пицца с томатным соусом и сыром моцарелла." data-price="500" data-img="images/Маргарита.png" role="listitem" tabindex="0" aria-label="Пицца Маргарита, 500 рублей">
+      <img src="images/Маргарита.png" alt="Маргарита" />
+      <div class="item-content">
+        <div class="item-title">Маргарита</div>
+        <div class="item-desc">Классическая пицца с томатным соусом и сыром моцарелла.</div>
+        <div class="item-price">500 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="pizza" data-id="12" data-title="Пепперони" data-desc="Пицца с острыми колбасками пепперони и сыром." data-price="550" data-img="images/Пепперони.png" role="listitem" tabindex="0" aria-label="Пицца Пепперони, 550 рублей">
+      <img src="images/Пепперони.png" alt="Пепперони" />
+      <div class="item-content">
+        <div class="item-title">Пепперони</div>
+        <div class="item-desc">Пицца с острыми колбасками пепперони и сыром.</div>
+        <div class="item-price">550 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="pizza" data-id="13" data-title="Вегетарианская" data-desc="Пицца с овощами и сыром." data-price="520" data-img="images/Вегетарианская.png" role="listitem" tabindex="0" aria-label="Пицца Вегетарианская, 520 рублей">
+      <img src="images/Вегетарианская.png" alt="Вегетарианская" />
+      <div class="item-content">
+        <div class="item-title">Вегетарианская</div>
+        <div class="item-desc">Пицца с овощами и сыром.</div>
+        <div class="item-price">520 ₽</div>
+      </div>
+    </div>
+    <!-- drinks -->
+    <div class="item" data-category="drinks" data-id="5" data-title="Кола" data-desc="Освежающая газировка." data-price="100" data-img="images/Кола.png" role="listitem" tabindex="0" aria-label="Кола, 100 рублей">
+      <img src="images/Кола.png" alt="Кола" />
+      <div class="item-content">
+        <div class="item-title">Кола</div>
+        <div class="item-desc">Освежающая газировка.</div>
+        <div class="item-price">100 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="drinks" data-id="6" data-title="Апельсиновый сок" data-desc="Свежевыжатый сок." data-price="120" data-img="images/Апельсиновый сок.png" role="listitem" tabindex="0" aria-label="Апельсиновый сок, 120 рублей">
+      <img src="images/Апельсиновый сок.png" alt="Апельсиновый сок" />
+      <div class="item-content">
+        <div class="item-title">Апельсиновый сок</div>
+        <div class="item-desc">Свежевыжатый сок.</div>
+        <div class="item-price">120 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="drinks" data-id="7" data-title="Кофе" data-desc="Горячий ароматный кофе." data-price="150" data-img="images/Кофе.png" role="listitem" tabindex="0" aria-label="Кофе, 150 рублей">
+      <img src="images/Кофе.png" alt="Кофе" />
+      <div class="item-content">
+        <div class="item-title">Кофе</div>
+        <div class="item-desc">Горячий ароматный кофе.</div>
+        <div class="item-price">150 ₽</div>
+      </div>
+    </div>
+    <!-- snacks -->
+    <div class="item" data-category="snacks" data-id="8" data-title="Картофель фри" data-desc="Хрустящий картофель фри." data-price="150" data-img="images/Картофель фри.png" role="listitem" tabindex="0" aria-label="Картофель фри, 150 рублей">
+      <img src="images/Картофель фри.png" alt="Картофель фри" />
+      <div class="item-content">
+        <div class="item-title">Картофель фри</div>
+        <div class="item-desc">Хрустящий картофель фри.</div>
+        <div class="item-price">150 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="snacks" data-id="9" data-title="Луковые кольца" data-desc="Золотистые луковые кольца во фритюре." data-price="170" data-img="images/Луковые кольца.png" role="listitem" tabindex="0" aria-label="Луковые кольца, 170 рублей">
+      <img src="images/Луковые кольца.png" alt="Луковые кольца" />
+      <div class="item-content">
+        <div class="item-title">Луковые кольца</div>
+        <div class="item-desc">Золотистые луковые кольца во фритюре.</div>
+        <div class="item-price">170 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="snacks" data-id="10" data-title="Куриные наггетсы" data-desc="Сочные куриные наггетсы в хрустящей панировке." data-price="210" data-img="images/Куриные наггетсы.png" role="listitem" tabindex="0" aria-label="Куриные наггетсы, 210 рублей">
+      <img src="images/Куриные наггетсы.png" alt="Куриные наггетсы" />
+      <div class="item-content">
+        <div class="item-title">Куриные наггетсы</div>
+        <div class="item-desc">Сочные куриные наггетсы в хрустящей панировке.</div>
+        <div class="item-price">210 ₽</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- product modal -->
+<div id="product-modal">
+  <div class="modal-inner">
+    <button id="close-product-modal" title="Закрыть">×</button>
+    <img id="product-modal-img" src="" alt="" />
+    <div id="product-modal-title"></div>
+    <div id="product-modal-desc"></div>
+    <div id="product-modal-price"></div>
+    <form id="add-to-cart-form" autocomplete="off">
+      <label for="product-modal-qty">Количество:</label>
+      <input id="product-modal-qty" type="number" min="1" value="1" />
+      <button type="submit">Добавить</button>
+    </form>
+  </div>
+</div>
+
+<!-- cart button -->
+<button id="open-cart-btn" title="Открыть корзину">🛒</button>
+
+<!-- cart modal with filter -->
+<div id="cart-modal">
+  <div id="cart-section">
+    <button id="close-cart-btn" title="Закрыть корзину">×</button>
+    <div id="cart-filter">
+      <h2>Фильтр корзины</h2>
+      <label><input type="radio" name="cart-filter" value="all" checked> Все</label>
+      <label><input type="radio" name="cart-filter" value="burgers"> Бургеры</label>
+      <label><input type="radio" name="cart-filter" value="pizza"> Пицца</label>
+      <label><input type="radio" name="cart-filter" value="drinks"> Напитки</label>
+      <label><input type="radio" name="cart-filter" value="snacks"> Закуски</label>
+      <button id="clear-cart">Очистить корзину</button>
+    </div>
+    <div id="cart-items-section">
+      <h3>Товары в корзине</h3>
+      <ul id="cart-items-list"></ul>
+      <div id="cart-total"></div>
+      <button id="checkout-btn">Оформить заказ</button>
+    </div>
+  </div>
+</div>
+
+<!-- order modal -->
+<div id="order-form-modal">
+  <div class="modal-content">
+    <button class="modal-close" id="close-order-form" title="Закрыть">×</button>
+    <h3>Оформление заказа</h3>
+    <form id="order-form" autocomplete="off">
+      <div class="order-form-total"></div>
+      <label for="order-name">Имя:</label>
+      <input type="text" id="order-name" name="name" required />
+      <div class="error" id="order-name-error"></div>
+      <label for="order-phone">Телефон:</label>
+      <input type="tel" id="order-phone" name="phone" required pattern="^(\+7|8|7)[0-9]{10}$" placeholder="+79991234567"/>
+      <div class="error" id="order-phone-error"></div>
+      <label for="order-address">Адрес доставки:</label>
+      <input type="text" id="order-address" name="address" required />
+      <div class="error" id="order-address-error"></div>
+      <button type="submit" class="btn-add">Заказать</button>
+      <div id="order-success"></div>
+    </form>
+  </div>
+</div>
+
+<!-- toast notification -->
+<div id="cart-toast"></div>
+
+
+<section id="promotions" aria-labelledby="promotions-title">
+  <div class="container">
+    <h2 id="promotions-title">Акции и спецпредложения</h2>
+    <div class="grid-container">
+      <div class="grid-element promo">Скидка 20% на все бургеры по средам!</div>
+      <div class="grid-element promo">
+        Комбо-набор «Семейный ужин» со скидкой 15%
+      </div>
+      <div class="grid-element promo">
+        Бесплатная доставка при заказе от 1000 ₽
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="delivery" aria-labelledby="delivery-title">
+  <div class="container">
+    <h2 id="delivery-title">Доставка и оплата</h2>
+    <p class="info">
+      Мы доставляем заказы в течение 30-60 минут по Москве и области.
+    </p>
+    <p class="info">
+      Оплата возможна наличными, картой при получении или онлайн.
+    </p>
+    <p class="info">Режим работы: Ежедневно с 10:00 до 23:00.</p>
+    <div class="map-container" style="margin-top: 20px">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.1234567890123!2d37.6173!3d55.7558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab3c3e1234567%3A0x123456789abcdef!2z0JrQu9C-0YHQutC40Lkg0L_RgNC-0YHQutC40Lkg0J3QsNGP!5e0!3m2!1sru!2sru!4v1580000000000!5m2!1sru!2sru"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Карта доставки"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Часто задаваемые вопросы</h2>
+        <div class="faq-list">
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">Как сделать заказ?</div>
+            <div class="faq-answer">
+              Выберите блюда в меню, добавьте их в корзину и оформите заказ через форму.
+            </div>
+          </div>
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">Какие способы оплаты доступны?</div>
+            <div class="faq-answer">
+              Оплата наличными, картой при получении или онлайн.
+            </div>
+          </div>
+          <div class="faq-item" tabindex="0">
+            <div class="faq-question">Сколько времени занимает доставка?</div>
+            <div class="faq-answer">
+              Доставка занимает от 30 до 60 минут в зависимости от адреса.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section id="subscribe" aria-label="Подписка на новости и акции">
+  <div class="container" style="max-width: 500px; text-align: center">
+    <h2>Подпишитесь на рассылку</h2>
+    <form onsubmit="alert('Вы успешно подписаны'); return false;">
+      <div class="form-group">
+        <input
+          type="email"
+          name="email"
+          placeholder="Введите ваш email"
+          required
+        />
+      </div>
+      <button type="submit" class="btn-submit">Подписаться</button>
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container">
+    <div class="grid-container">
+      <div class="grid-element">
+        <div class="footer-col">
+          <h3>FastBite</h3>
+          <p>Вкусно. Быстро. Всегда с тобой.</p>
+          <p>© 2025 FastBite. Все права защищены.</p>
+        </div>
+      </div>
+      <div class="grid-element">
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <p>Телефон: +7 (123) 456-78-90</p>
+          <p>Email: info@fastbite.ru</p>
+          <p>Адрес: Москва, ул. Примерная, д. 1</p>
+        </div>
+      </div>
+      <div class="grid-element">
+        <div class="footer-col">
+          <h3>Соцсети</h3>
+          <div class="socials">
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+              <picture >
+                <source srcset="images/icons8-facebook-новый-50.avif" type="image/avif" />
+                <source srcset="images/icons8-facebook-новый-50.webp" type="image/webp" />
+                <img src="images/icons8-facebook-новый-50.png" alt="Фейсбук"/>
+              </picture>
+            </a>
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+              <picture >
+                <source srcset="images/icons8-instagram-50.avif" type="image/avif" />
+                <source srcset="images/icons8-instagram-50.webp" type="image/webp" />
+                <img src="images/icons8-instagram-50.png" alt="Инстаграм"/>
+              </picture>
+            </a>
+            <a href="#" aria-label="Telegram" target="_blank" rel="noopener">
+              <picture >
+                <source srcset="images/icons8-телеграм-50.avif" type="image/avif" />
+                <source srcset="images/icons8-телеграм-50.webp" type="image/webp" />
+                <img src="images/icons8-телеграм-50.png" alt="Telegram"/>
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.min.js"></script>
+</body>
+</html>
+
