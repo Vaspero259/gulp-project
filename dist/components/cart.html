@@ -1,0 +1,183 @@
+<section id="menu">
+<!-- catalog filter -->
+<div id="category-filter" role="radiogroup" aria-label="Фильтр каталога товаров">
+  <input type="radio" id="cat-burgers" name="catalog-filter" value="burgers" checked />
+  <label for="cat-burgers">Бургеры</label>
+  <input type="radio" id="cat-pizza" name="catalog-filter" value="pizza" />
+  <label for="cat-pizza">Пицца</label>
+  <input type="radio" id="cat-drinks" name="catalog-filter" value="drinks" />
+  <label for="cat-drinks">Напитки</label>
+  <input type="radio" id="cat-snacks" name="catalog-filter" value="snacks" />
+  <label for="cat-snacks">Закуски</label>
+</div>
+
+<div class="container">
+  <div class="items" id="catalog-items" role="list">
+    <!-- burgers -->
+    <div class="item show" data-category="burgers" data-id="1" data-title="Классический бургер" data-desc="Сочный бургер с говяжьей котлетой, свежими овощами и соусом." data-price="350" data-img="images/Классический бургер.png" role="listitem" tabindex="0" aria-label="Классический бургер, 350 рублей">
+      <img src="images/Классический бургер.png" alt="Классический бургер" />
+      <div class="item-content">
+        <div class="item-title">Классический бургер</div>
+        <div class="item-desc">Сочный бургер с говяжьей котлетой, свежими овощами и соусом.</div>
+        <div class="item-price">350 ₽</div>
+      </div>
+    </div>
+    <div class="item show" data-category="burgers" data-id="2" data-title="Чизбургер" data-desc="Бургер с плавленым сыром, сочной котлетой и свежими овощами." data-price="380" data-img="images/Чизбургер.png" role="listitem" tabindex="0" aria-label="Чизбургер, 380 рублей">
+      <img src="images/Чизбургер.png" alt="Чизбургер" />
+      <div class="item-content">
+        <div class="item-title">Чизбургер</div>
+        <div class="item-desc">Бургер с плавленым сыром, сочной котлетой и свежими овощами.</div>
+        <div class="item-price">380 ₽</div>
+      </div>
+    </div>
+    <div class="item show" data-category="burgers" data-id="4" data-title="Бургер с беконом" data-desc="Бургер с хрустящим беконом, говяжьей котлетой и сыром." data-price="420" data-img="images/Бургер с беконом.png" role="listitem" tabindex="0" aria-label="Бургер с беконом, 420 рублей">
+      <img src="images/Бургер с беконом.png" alt="Бургер с беконом" />
+      <div class="item-content">
+        <div class="item-title">Бургер с беконом</div>
+        <div class="item-desc">Бургер с хрустящим беконом, говяжьей котлетой и сыром.</div>
+        <div class="item-price">420 ₽</div>
+      </div>
+    </div>
+    <!-- pizza -->
+    <div class="item" data-category="pizza" data-id="11" data-title="Маргарита" data-desc="Классическая пицца с томатным соусом и сыром моцарелла." data-price="500" data-img="images/Маргарита.png" role="listitem" tabindex="0" aria-label="Пицца Маргарита, 500 рублей">
+      <img src="images/Маргарита.png" alt="Маргарита" />
+      <div class="item-content">
+        <div class="item-title">Маргарита</div>
+        <div class="item-desc">Классическая пицца с томатным соусом и сыром моцарелла.</div>
+        <div class="item-price">500 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="pizza" data-id="12" data-title="Пепперони" data-desc="Пицца с острыми колбасками пепперони и сыром." data-price="550" data-img="images/Пепперони.png" role="listitem" tabindex="0" aria-label="Пицца Пепперони, 550 рублей">
+      <img src="images/Пепперони.png" alt="Пепперони" />
+      <div class="item-content">
+        <div class="item-title">Пепперони</div>
+        <div class="item-desc">Пицца с острыми колбасками пепперони и сыром.</div>
+        <div class="item-price">550 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="pizza" data-id="13" data-title="Вегетарианская" data-desc="Пицца с овощами и сыром." data-price="520" data-img="images/Вегетарианская.png" role="listitem" tabindex="0" aria-label="Пицца Вегетарианская, 520 рублей">
+      <img src="images/Вегетарианская.png" alt="Вегетарианская" />
+      <div class="item-content">
+        <div class="item-title">Вегетарианская</div>
+        <div class="item-desc">Пицца с овощами и сыром.</div>
+        <div class="item-price">520 ₽</div>
+      </div>
+    </div>
+    <!-- drinks -->
+    <div class="item" data-category="drinks" data-id="5" data-title="Кола" data-desc="Освежающая газировка." data-price="100" data-img="images/Кола.png" role="listitem" tabindex="0" aria-label="Кола, 100 рублей">
+      <img src="images/Кола.png" alt="Кола" />
+      <div class="item-content">
+        <div class="item-title">Кола</div>
+        <div class="item-desc">Освежающая газировка.</div>
+        <div class="item-price">100 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="drinks" data-id="6" data-title="Апельсиновый сок" data-desc="Свежевыжатый сок." data-price="120" data-img="images/Апельсиновый сок.png" role="listitem" tabindex="0" aria-label="Апельсиновый сок, 120 рублей">
+      <img src="images/Апельсиновый сок.png" alt="Апельсиновый сок" />
+      <div class="item-content">
+        <div class="item-title">Апельсиновый сок</div>
+        <div class="item-desc">Свежевыжатый сок.</div>
+        <div class="item-price">120 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="drinks" data-id="7" data-title="Кофе" data-desc="Горячий ароматный кофе." data-price="150" data-img="images/Кофе.png" role="listitem" tabindex="0" aria-label="Кофе, 150 рублей">
+      <img src="images/Кофе.png" alt="Кофе" />
+      <div class="item-content">
+        <div class="item-title">Кофе</div>
+        <div class="item-desc">Горячий ароматный кофе.</div>
+        <div class="item-price">150 ₽</div>
+      </div>
+    </div>
+    <!-- snacks -->
+    <div class="item" data-category="snacks" data-id="8" data-title="Картофель фри" data-desc="Хрустящий картофель фри." data-price="150" data-img="images/Картофель фри.png" role="listitem" tabindex="0" aria-label="Картофель фри, 150 рублей">
+      <img src="images/Картофель фри.png" alt="Картофель фри" />
+      <div class="item-content">
+        <div class="item-title">Картофель фри</div>
+        <div class="item-desc">Хрустящий картофель фри.</div>
+        <div class="item-price">150 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="snacks" data-id="9" data-title="Луковые кольца" data-desc="Золотистые луковые кольца во фритюре." data-price="170" data-img="images/Луковые кольца.png" role="listitem" tabindex="0" aria-label="Луковые кольца, 170 рублей">
+      <img src="images/Луковые кольца.png" alt="Луковые кольца" />
+      <div class="item-content">
+        <div class="item-title">Луковые кольца</div>
+        <div class="item-desc">Золотистые луковые кольца во фритюре.</div>
+        <div class="item-price">170 ₽</div>
+      </div>
+    </div>
+    <div class="item" data-category="snacks" data-id="10" data-title="Куриные наггетсы" data-desc="Сочные куриные наггетсы в хрустящей панировке." data-price="210" data-img="images/Куриные наггетсы.png" role="listitem" tabindex="0" aria-label="Куриные наггетсы, 210 рублей">
+      <img src="images/Куриные наггетсы.png" alt="Куриные наггетсы" />
+      <div class="item-content">
+        <div class="item-title">Куриные наггетсы</div>
+        <div class="item-desc">Сочные куриные наггетсы в хрустящей панировке.</div>
+        <div class="item-price">210 ₽</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- product modal -->
+<div id="product-modal">
+  <div class="modal-inner">
+    <button id="close-product-modal" title="Закрыть">×</button>
+    <img id="product-modal-img" src="" alt="" />
+    <div id="product-modal-title"></div>
+    <div id="product-modal-desc"></div>
+    <div id="product-modal-price"></div>
+    <form id="add-to-cart-form" autocomplete="off">
+      <label for="product-modal-qty">Количество:</label>
+      <input id="product-modal-qty" type="number" min="1" value="1" />
+      <button type="submit">Добавить</button>
+    </form>
+  </div>
+</div>
+
+<!-- cart button -->
+<button id="open-cart-btn" title="Открыть корзину">🛒</button>
+
+<!-- cart modal with filter -->
+<div id="cart-modal">
+  <div id="cart-section">
+    <button id="close-cart-btn" title="Закрыть корзину">×</button>
+    <div id="cart-filter">
+      <h2>Фильтр корзины</h2>
+      <label><input type="radio" name="cart-filter" value="all" checked> Все</label>
+      <label><input type="radio" name="cart-filter" value="burgers"> Бургеры</label>
+      <label><input type="radio" name="cart-filter" value="pizza"> Пицца</label>
+      <label><input type="radio" name="cart-filter" value="drinks"> Напитки</label>
+      <label><input type="radio" name="cart-filter" value="snacks"> Закуски</label>
+      <button id="clear-cart">Очистить корзину</button>
+    </div>
+    <div id="cart-items-section">
+      <h3>Товары в корзине</h3>
+      <ul id="cart-items-list"></ul>
+      <div id="cart-total"></div>
+      <button id="checkout-btn">Оформить заказ</button>
+    </div>
+  </div>
+</div>
+
+<!-- order modal -->
+<div id="order-form-modal">
+  <div class="modal-content">
+    <button class="modal-close" id="close-order-form" title="Закрыть">×</button>
+    <h3>Оформление заказа</h3>
+    <form id="order-form" autocomplete="off">
+      <div class="order-form-total"></div>
+      <label for="order-name">Имя:</label>
+      <input type="text" id="order-name" name="name" required />
+      <div class="error" id="order-name-error"></div>
+      <label for="order-phone">Телефон:</label>
+      <input type="tel" id="order-phone" name="phone" required pattern="^(\+7|8|7)[0-9]{10}$" placeholder="+79991234567"/>
+      <div class="error" id="order-phone-error"></div>
+      <label for="order-address">Адрес доставки:</label>
+      <input type="text" id="order-address" name="address" required />
+      <div class="error" id="order-address-error"></div>
+      <button type="submit" class="btn-add">Заказать</button>
+      <div id="order-success"></div>
+    </form>
+  </div>
+</div>
+
+<!-- toast notification -->
+<div id="cart-toast"></div>
