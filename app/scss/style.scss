@@ -271,3 +271,11 @@ iframe{
   height: 200px;
 }
 }
+@media (max-width: 500px){
+      section {
+        padding: 20px 0;
+    }
+    #about-title{
+      margin-top: 5%;
+    }
+}
