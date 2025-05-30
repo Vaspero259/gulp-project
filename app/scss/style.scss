@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "Roboto-Regular";
-  src: url("fonts/Roboto-Regular.woff2") format("woff2"),
-    url("fonts/Roboto-Regular.woff") format("woff");
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Roboto-Bold";
-  src: url("fonts/Roboto-Bold.woff2") format("woff2"),
-    url("fonts/Roboto-Bold.woff") format("woff");
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: "Roboto-Light";
-  src: url("fonts/Roboto-Light.woff2") format("woff2"),
-    url("fonts/Roboto-Light.woff") format("woff");
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: "Montserrat-Bold";
-  src: url("fonts/Montserrat-Bold.woff2") format("woff2"),
-    url("fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url("fonts/Montserrat.woff2") format("woff2"),
-    url("fonts/Montserrat.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -54,8 +54,8 @@
 
 @font-face {
   font-family: "Montserrat-Light";
-  src: url("fonts/Montserrat-Light.woff2") format("woff2"),
-    url("fonts/Montserrat-Light.woff") format("woff");
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"),
+    url("../fonts/Montserrat-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -66,8 +66,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 body {
   color: var(--text-color);
@@ -75,7 +75,6 @@ body {
   font-size: 18px;
   background: var(--background-color);
   line-height: 1.5;
-
 }
 
 h1,
@@ -97,16 +96,16 @@ h2 {
 
 h3 {
   font-size: 20px;
-  color: var(--main-color)
+  color: var(--main-color);
 }
 a {
   text-decoration: none;
   cursor: pointer;
   color: var(--text-color);
   font-family: "Montserrat-Bold", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
-label{
+label {
   color: var(--secondary-text-color);
 }
 .container {
@@ -116,14 +115,15 @@ label{
 section {
   padding: 60px 0;
 }
-section h2{
+section h2 {
   margin-bottom: 4%;
-  text-align: center
+  text-align: center;
+  white-space: nowrap;
 }
 section p {
-    max-width: 60%;
-    margin: 0 auto 40px;
-    text-align: center;
+  max-width: 60%;
+  margin: 0 auto 40px;
+  text-align: center;
 }
 .grid-container {
   display: grid;
@@ -148,18 +148,17 @@ section p {
 
 /* menu */
 
-
-
-
 /* promotions */
 
-#promotions, #delivery, #faq{
+#promotions,
+#delivery,
+#faq {
   color: var(--secondary-text-color);
 }
-#promotions .grid-container{
-      width: 70%; 
+#promotions .grid-container {
+  width: 70%;
 }
-.promo{
+.promo {
   border: 2px solid var(--accent-color);
   border-radius: 20px;
   margin-right: 5%;
@@ -167,10 +166,10 @@ section p {
   align-items: center;
 }
 
-// delivery 
+// delivery
 
 #delivery p {
-    margin: 0 auto 20px;
+  margin: 0 auto 20px;
 }
 
 #contacts iframe {
@@ -178,104 +177,121 @@ section p {
   height: 350px;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 element.style {
-    margin-top: 3%;
+  margin-top: 3%;
 }
-
 
 /* FAQ in a separate SCSS file */
 
-
-
-
 /* subscribe */
 
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 8px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    resize: vertical;
-    margin-bottom: 5%;
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 5%;
 }
 
 .btn-submit {
-    background-color: var(--main-color);
-    color: var(--text-color);
-    border: none;
-    padding: 12px 25px;
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 25px;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.btn-submit:hover{
+.btn-submit:hover {
   background-color: var(--accent-color);
 }
 
-
-@media (max-width:1300px)
-{
-    a {
+@media (max-width: 1300px) {
+  a {
     font-size: 12px;
-}
-h1 {
+  }
+  h1 {
     font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3,
+  .item-title {
+    font-size: 14px;
+  }
+  body {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .promo {
+    padding: 5% 8%;
+    align-items: start;
+  }
 }
-h2{
-  font-size: 18px;
-}
-h3, .item-title{
-  font-size: 14px;
-}
-body {
-  color: var(--text-color);
-  font-family: "Montserrat-Regular", sans-serif;
-  font-size: 12px;
-  background: var(--background-color);
-  line-height: 1.5;
-}
-.promo{
-  padding: 5% 8%;
-  align-items: start;
-}
-}
-@media (max-width:600px){
-  h1{
-  font-size: 16px;
-}
-h2{
-  font-size: 14px;
-}
-h3{
-  font-size: 14px;
-}
-body{
-  font-size: 12px;
-}
-section {
+@media (max-width: 600px) {
+  h1 {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  body {
+    font-size: 12px;
+  }
+  section {
     padding: 40px 0;
-}
-#promotions .grid-container{
-  width: 100%;
-}
-section p {
+  }
+  #promotions .grid-container {
+    width: 100%;
+  }
+  section p {
     max-width: 100%;
   }
-iframe{
-  height: 200px;
+  iframe {
+    height: 200px;
+  }
 }
+@media (max-width: 500px) {
+  section {
+    padding: 20px 0;
+  }
+  #about-title {
+    margin-top: 5%;
+  }
 }
-@media (max-width: 500px){
-      section {
-        padding: 20px 0;
-    }
-    #about-title{
-      margin-top: 5%;
-    }
+@media (max-width: 350px) {
+  a,
+  .banner-subtext > div {
+    font-size: 10px;
+  }
+  h1 {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+  h3,
+  .item-title {
+    font-size: 12px;
+  }
+  body {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  section {
+    padding: 10px 0;
+  }
 }

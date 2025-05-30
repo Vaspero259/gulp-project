@@ -1,6 +1,12 @@
   header{
     background-color: var(--main-color);
   }
+header li, header .logo, header .tel {
+  transition: transform .3s ease-in;
+}
+header li:hover, header .logo:hover, header .tel:hover {
+  transform: scale(0.95);
+}
 
   .icon-tel{
     display: flex;
@@ -37,7 +43,7 @@
   }
 
   header .grid-container{
-    grid-template-columns: 0.3fr 1.5fr 0.5fr;
+    grid-template-columns: 0.3fr 2fr 0.5fr;
     padding: 1% 0px;
     align-items: center
   }
@@ -188,7 +194,7 @@ nav li {
 
 @media (max-width:1600px) {
   header .grid-container {
-    grid-template-columns: .2fr 1.8fr .5fr;
+    grid-template-columns: .2fr 2fr .5fr;
     padding: 1% 0;
 }
   header a{
@@ -230,6 +236,18 @@ nav li {
   margin-bottom: 1%;
 }
 }
+
+@media(max-width:970px){
+      .logo-text {
+        font-size: 14px;
+    }
+      header a {
+        font-size: 10px;
+    }
+        header .grid-container {
+        grid-template-columns: .5fr 2fr .5fr;
+    }
+}
   /* бургер меню */
 
 @media (max-width: 875px) {
@@ -261,8 +279,7 @@ nav li {
     transform: scale(1.05);
   }
   header .grid-container{
-    grid-template-columns: 1.3fr 0.5fr 1fr;
-    padding: 1% 0px;
+display: flex;
   }
 
   #burger-toggle:checked + #burger-btn + ul {
@@ -280,5 +297,54 @@ nav li {
 .main-banner {
         padding: 60px 20px;
         min-height: 0;
+    }
+}
+@media (max-width: 410px){
+
+  .tel-text a{
+    font-size: 10px;
+
+  }
+      .logo-text {
+        font-size: 14px;
+    }
+ #burger-btn{
+      font-size: 20px;
+ }   
+ .tel img{
+  width: 15px;
+  height: 15px;
+ }
+     #category-filter {
+      gap: 8px;
+    }
+        .btn-order {
+        font-size: 12px;
+        width: 120px;
+        line-height: 0;
+        height: 25px;
+        margin-top: 5%;
+    }
+    .banner-text{
+      height: 40px;
+    }
+}
+@media (max-width: 350px){
+.banner-text{
+  height: 40px;
+  width: 90%;
+}
+.banner-subtext{
+  height: 30px;
+   width: 80%;
+}
+
+
+    .main-banner {
+        padding: 40px 20px;
+        min-height: 0;
+    }
+        .banner-subtext>div{
+      font-size: 10px;
     }
 }
